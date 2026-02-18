@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    long long N;
+   
+    if (scanf("%lld", &N) != 1) return 0;
+
+    long long idealSum = (N * (N + 1)) / 2;
+    long long actualSum = 0;
+
+    for (int i = 0; i < N - 1; i++) {
+        int rollNumber;
+        scanf("%d", &rollNumber);
+        actualSum += rollNumber;
+    }
+
+    printf("%lld\n", idealSum - actualSum);
+
+    return 0;
+}
